@@ -7757,7 +7757,7 @@
       <a name="contents">addr/data: 6 4
 3 0 4 5 3 0 4 5
 24*0 2 2 6 6 0 1 d
-c 0 0 7
+c 0 0 7 8
 </a>
       <a name="dataWidth" val="4"/>
     </comp>
@@ -7765,7 +7765,7 @@ c 0 0 7
       <a name="addrWidth" val="6"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 6 4
-8*0 2 2 0 0 0 1 d
+8*0 2 2 7 8 0 1 d
 9
 </a>
       <a name="dataWidth" val="4"/>
