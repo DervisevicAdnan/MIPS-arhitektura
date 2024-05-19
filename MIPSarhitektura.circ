@@ -299,10 +299,6 @@
     <comp lib="0" loc="(170,760)" name="Tunnel">
       <a name="label" val="RST"/>
     </comp>
-    <comp lib="0" loc="(1730,390)" name="Probe">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-    </comp>
     <comp lib="0" loc="(1850,1030)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="SaEX"/>
@@ -370,6 +366,10 @@
       <a name="value" val="0x0"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(2160,400)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="0" loc="(2230,970)" name="Tunnel">
       <a name="label" val="OpEx"/>
       <a name="width" val="6"/>
@@ -384,7 +384,7 @@
     </comp>
     <comp lib="0" loc="(2340,350)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALUrezWB"/>
+      <a name="label" val="WriteData"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(2350,290)" name="Tunnel">
@@ -456,7 +456,7 @@
     </comp>
     <comp lib="0" loc="(2590,350)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALUrezWB"/>
+      <a name="label" val="WriteData"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(2610,400)" name="Tunnel">
@@ -957,7 +957,7 @@
     <wire from="(1520,410)" to="(1520,710)"/>
     <wire from="(1520,710)" to="(1650,710)"/>
     <wire from="(1530,390)" to="(1530,650)"/>
-    <wire from="(1530,390)" to="(1730,390)"/>
+    <wire from="(1530,390)" to="(2150,390)"/>
     <wire from="(1530,650)" to="(1650,650)"/>
     <wire from="(1540,370)" to="(1540,770)"/>
     <wire from="(1540,770)" to="(1650,770)"/>
@@ -1070,6 +1070,8 @@
     <wire from="(2050,480)" to="(2350,480)"/>
     <wire from="(2090,880)" to="(2090,890)"/>
     <wire from="(2090,880)" to="(2200,880)"/>
+    <wire from="(2150,390)" to="(2150,400)"/>
+    <wire from="(2150,400)" to="(2160,400)"/>
     <wire from="(2190,650)" to="(2190,860)"/>
     <wire from="(2190,860)" to="(2200,860)"/>
     <wire from="(2190,900)" to="(2190,970)"/>
@@ -9999,10 +10001,9 @@ c 0 0 7 8
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 24 8
-21 8 0 a ac 8 0 2
-a4 8 0 1 a0 8 0 0
-8c 9 0 2 84 a 0 1
-80 b
+21 29 0 a ac 9 0 2
+8c 8 0 2 21 8 0 5
+21 8 0 3
 </a>
       <a name="line" val="quad"/>
     </comp>
@@ -10894,7 +10895,7 @@ a4 8 0 1 a0 8 0 0
     </comp>
     <comp lib="0" loc="(730,700)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="MEMWrite"/>
+      <a name="label" val="WBWrite"/>
     </comp>
     <comp lib="0" loc="(730,730)" name="Tunnel">
       <a name="facing" val="east"/>
