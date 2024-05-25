@@ -189,6 +189,10 @@
       <a name="label" val="IFIDRt"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(1090,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="JR"/>
+    </comp>
     <comp lib="0" loc="(1090,60)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="IFIDRs"/>
@@ -1208,6 +1212,7 @@
     <wire from="(1080,810)" to="(1080,950)"/>
     <wire from="(1080,950)" to="(1660,950)"/>
     <wire from="(1090,1010)" to="(1190,1010)"/>
+    <wire from="(1090,220)" to="(1110,220)"/>
     <wire from="(1090,60)" to="(1110,60)"/>
     <wire from="(1090,970)" to="(1660,970)"/>
     <wire from="(1090,990)" to="(1180,990)"/>
@@ -10472,8 +10477,8 @@ c 0 0 7 8
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 24 8
-21 8 0 9 21 29 0 8
-c 0 0 6 21 8 0 2
+21 8 0 18 1 0 48 9
+21 8 0 1 21 8 0 2
 21 8 0 3 21 8 0 4
 21 8 0 5 21 8 0 6
 ad 28
@@ -21590,6 +21595,10 @@ ad 28
       <a name="label" val="MEMWriteReg"/>
       <a name="width" val="5"/>
     </comp>
+    <comp lib="0" loc="(230,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="JumpReg"/>
+    </comp>
     <comp lib="0" loc="(270,180)" name="Tunnel">
       <a name="label" val="Rs"/>
       <a name="width" val="5"/>
@@ -21617,6 +21626,9 @@ ad 28
     <comp lib="0" loc="(270,520)" name="Tunnel">
       <a name="label" val="MEMWriteReg"/>
       <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(270,550)" name="Tunnel">
+      <a name="label" val="JR"/>
     </comp>
     <comp lib="0" loc="(420,600)" name="Tunnel">
       <a name="label" val="RsRt"/>
@@ -21658,6 +21670,14 @@ ad 28
       <a name="facing" val="east"/>
       <a name="label" val="RtRt"/>
     </comp>
+    <comp lib="0" loc="(710,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="JR"/>
+    </comp>
+    <comp lib="0" loc="(710,750)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IDBranch"/>
+    </comp>
     <comp lib="0" loc="(730,480)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="MemRead"/>
@@ -21688,10 +21708,6 @@ ad 28
       <a name="facing" val="east"/>
       <a name="label" val="MEMMemRead"/>
     </comp>
-    <comp lib="0" loc="(760,740)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="IDBranch"/>
-    </comp>
     <comp lib="0" loc="(780,780)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="EXRegWrite"/>
@@ -21703,6 +21719,9 @@ ad 28
     <comp lib="1" loc="(1130,780)" name="NOT Gate"/>
     <comp lib="1" loc="(750,900)" name="OR Gate"/>
     <comp lib="1" loc="(760,620)" name="OR Gate"/>
+    <comp lib="1" loc="(790,740)" name="OR Gate">
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(870,500)" name="AND Gate"/>
     <comp lib="1" loc="(880,740)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -21746,6 +21765,7 @@ ad 28
     <wire from="(230,420)" to="(270,420)"/>
     <wire from="(230,470)" to="(270,470)"/>
     <wire from="(230,520)" to="(270,520)"/>
+    <wire from="(230,550)" to="(270,550)"/>
     <wire from="(400,600)" to="(420,600)"/>
     <wire from="(400,700)" to="(420,700)"/>
     <wire from="(410,810)" to="(430,810)"/>
@@ -21757,12 +21777,15 @@ ad 28
     <wire from="(680,280)" to="(740,280)"/>
     <wire from="(690,600)" to="(710,600)"/>
     <wire from="(690,640)" to="(710,640)"/>
+    <wire from="(710,720)" to="(740,720)"/>
+    <wire from="(710,750)" to="(760,750)"/>
     <wire from="(730,480)" to="(820,480)"/>
+    <wire from="(740,720)" to="(740,730)"/>
+    <wire from="(740,730)" to="(760,730)"/>
     <wire from="(740,970)" to="(830,970)"/>
     <wire from="(750,1010)" to="(760,1010)"/>
     <wire from="(750,900)" to="(780,900)"/>
     <wire from="(760,620)" to="(790,620)"/>
-    <wire from="(760,740)" to="(830,740)"/>
     <wire from="(760,990)" to="(760,1010)"/>
     <wire from="(760,990)" to="(830,990)"/>
     <wire from="(780,780)" to="(790,780)"/>
@@ -21772,6 +21795,7 @@ ad 28
     <wire from="(790,520)" to="(820,520)"/>
     <wire from="(790,620)" to="(790,720)"/>
     <wire from="(790,720)" to="(830,720)"/>
+    <wire from="(790,740)" to="(830,740)"/>
     <wire from="(790,760)" to="(790,780)"/>
     <wire from="(790,760)" to="(830,760)"/>
     <wire from="(870,500)" to="(960,500)"/>
