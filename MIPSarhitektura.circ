@@ -10462,11 +10462,11 @@ c 0 0 7 8
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 24 8
-21 8 0 a 21 29 0 a
-11 28 0 2 21 8 0 2
+21 8 0 9 21 29 0 8
+1d 0 0 2 21 8 0 2
 21 8 0 3 21 8 0 4
 21 8 0 5 21 8 0 6
-21 8 0 7 21 8 0 8
+ad 28
 </a>
       <a name="line" val="quad"/>
     </comp>
@@ -22531,7 +22531,7 @@ c 0 0 7 8
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
     </comp>
-    <comp lib="0" loc="(1030,800)" name="Tunnel">
+    <comp lib="0" loc="(1030,810)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Op3bit"/>
       <a name="width" val="3"/>
@@ -22674,23 +22674,26 @@ c 0 0 7 8
     <comp lib="0" loc="(460,470)" name="Tunnel">
       <a name="label" val="JednakoD2"/>
     </comp>
-    <comp lib="0" loc="(460,570)" name="Tunnel">
-      <a name="label" val="Jednako0"/>
-    </comp>
     <comp lib="0" loc="(460,670)" name="Tunnel">
       <a name="label" val="ManjeD2"/>
     </comp>
     <comp lib="0" loc="(460,770)" name="Tunnel">
-      <a name="label" val="Vece0"/>
+      <a name="label" val="Manje0"/>
+    </comp>
+    <comp lib="0" loc="(490,570)" name="Tunnel">
+      <a name="label" val="Jednako0"/>
     </comp>
     <comp lib="0" loc="(500,500)" name="Tunnel">
       <a name="label" val="RazlicitoD2"/>
     </comp>
+    <comp lib="0" loc="(500,600)" name="Tunnel">
+      <a name="label" val="Razlicito0"/>
+    </comp>
     <comp lib="0" loc="(500,700)" name="Tunnel">
-      <a name="label" val="VeceJednako0"/>
+      <a name="label" val="VeceJednakoD2"/>
     </comp>
     <comp lib="0" loc="(500,800)" name="Tunnel">
-      <a name="label" val="ManjeJednako0"/>
+      <a name="label" val="VeceJednako0"/>
     </comp>
     <comp lib="0" loc="(580,200)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -22715,13 +22718,32 @@ c 0 0 7 8
     <comp lib="0" loc="(650,1180)" name="Tunnel">
       <a name="label" val="Link"/>
     </comp>
+    <comp lib="0" loc="(650,990)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Manje0"/>
+    </comp>
+    <comp lib="0" loc="(670,1030)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Jednako0"/>
+    </comp>
     <comp lib="0" loc="(670,470)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="ManjeD2"/>
     </comp>
+    <comp lib="0" loc="(670,910)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="VeceJednako0"/>
+    </comp>
+    <comp lib="0" loc="(670,950)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Razlicito0"/>
+    </comp>
     <comp lib="0" loc="(720,440)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="VeceJednako0"/>
+    </comp>
+    <comp lib="0" loc="(780,1010)" name="Tunnel">
+      <a name="label" val="ManjeJednako0"/>
     </comp>
     <comp lib="0" loc="(780,650)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -22747,6 +22769,9 @@ c 0 0 7 8
       <a name="facing" val="north"/>
       <a name="label" val="Kontrol2"/>
       <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(790,930)" name="Tunnel">
+      <a name="label" val="Vece0"/>
     </comp>
     <comp lib="0" loc="(830,450)" name="Tunnel">
       <a name="label" val="BgBl"/>
@@ -22775,6 +22800,7 @@ c 0 0 7 8
     <comp lib="1" loc="(390,940)" name="NOT Gate"/>
     <comp lib="1" loc="(390,980)" name="NOT Gate"/>
     <comp lib="1" loc="(490,500)" name="NOT Gate"/>
+    <comp lib="1" loc="(490,600)" name="NOT Gate"/>
     <comp lib="1" loc="(490,700)" name="NOT Gate"/>
     <comp lib="1" loc="(490,800)" name="NOT Gate"/>
     <comp lib="1" loc="(530,1500)" name="AND Gate">
@@ -22786,6 +22812,8 @@ c 0 0 7 8
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(640,1180)" name="AND Gate"/>
+    <comp lib="1" loc="(760,1010)" name="OR Gate"/>
+    <comp lib="1" loc="(760,930)" name="AND Gate"/>
     <comp lib="2" loc="(810,450)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
@@ -22797,8 +22825,7 @@ c 0 0 7 8
     <comp loc="(450,670)" name="SLT32b"/>
     <comp loc="(450,770)" name="SLT32b"/>
     <wire from="(1030,730)" to="(1030,750)"/>
-    <wire from="(1030,770)" to="(1030,780)"/>
-    <wire from="(1030,780)" to="(1030,800)"/>
+    <wire from="(1030,780)" to="(1030,810)"/>
     <wire from="(1050,690)" to="(1050,700)"/>
     <wire from="(1050,690)" to="(1100,690)"/>
     <wire from="(1050,710)" to="(1100,710)"/>
@@ -22878,7 +22905,9 @@ c 0 0 7 8
     <wire from="(450,470)" to="(450,500)"/>
     <wire from="(450,470)" to="(460,470)"/>
     <wire from="(450,500)" to="(460,500)"/>
-    <wire from="(450,570)" to="(460,570)"/>
+    <wire from="(450,570)" to="(450,600)"/>
+    <wire from="(450,570)" to="(490,570)"/>
+    <wire from="(450,600)" to="(460,600)"/>
     <wire from="(450,670)" to="(450,700)"/>
     <wire from="(450,670)" to="(460,670)"/>
     <wire from="(450,700)" to="(460,700)"/>
@@ -22888,6 +22917,7 @@ c 0 0 7 8
     <wire from="(460,1060)" to="(460,1180)"/>
     <wire from="(460,1180)" to="(510,1180)"/>
     <wire from="(490,500)" to="(500,500)"/>
+    <wire from="(490,600)" to="(500,600)"/>
     <wire from="(490,700)" to="(500,700)"/>
     <wire from="(490,800)" to="(500,800)"/>
     <wire from="(530,1500)" to="(550,1500)"/>
@@ -22896,7 +22926,11 @@ c 0 0 7 8
     <wire from="(550,1200)" to="(590,1200)"/>
     <wire from="(580,200)" to="(590,200)"/>
     <wire from="(640,1180)" to="(650,1180)"/>
+    <wire from="(650,990)" to="(710,990)"/>
+    <wire from="(670,1030)" to="(710,1030)"/>
     <wire from="(670,470)" to="(740,470)"/>
+    <wire from="(670,910)" to="(710,910)"/>
+    <wire from="(670,950)" to="(710,950)"/>
     <wire from="(720,440)" to="(750,440)"/>
     <wire from="(740,430)" to="(740,450)"/>
     <wire from="(740,430)" to="(770,430)"/>
@@ -22905,6 +22939,8 @@ c 0 0 7 8
     <wire from="(750,440)" to="(750,460)"/>
     <wire from="(750,440)" to="(770,440)"/>
     <wire from="(750,460)" to="(770,460)"/>
+    <wire from="(760,1010)" to="(780,1010)"/>
+    <wire from="(760,930)" to="(790,930)"/>
     <wire from="(780,650)" to="(920,650)"/>
     <wire from="(780,680)" to="(920,680)"/>
     <wire from="(780,710)" to="(790,710)"/>
