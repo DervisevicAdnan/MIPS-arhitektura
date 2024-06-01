@@ -8900,6 +8900,8 @@
       <a name="width" val="6"/>
     </comp>
     <comp lib="0" loc="(560,1210)" name="Splitter">
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="0"/>
       <a name="spacing" val="2"/>
     </comp>
     <comp lib="0" loc="(560,1210)" name="Tunnel">
