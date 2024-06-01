@@ -26,8 +26,8 @@ sra r9,r8,2
 ori r8,r8,1 
 lui r9,0
 sw r7,0(r0)
-sw r8,0(r0)
-sw r9,4(r0)	
+sw r8,4(r0)
+sw r9,8(r0)	
 
 //r7=1 r8=18 r9=0
 
@@ -38,7 +38,6 @@ sw r9,4(r0)
 00 08 48 83 35 08 00 01	
 3d 09 00 00 ac 07 00 00	
 ac 08 00 04 ac 09 00 08	
-
 
 ##TESTNI SLUCAJ 3.
 
@@ -397,3 +396,34 @@ af ab 00 0c af ab 00 10
 21 49 00 00 21 6a 00 00
 01 2a 58 20 21 8c 00 01
 08 00 00 12
+
+
+//NEPOSTOJECA INSTRUKCIJA
+
+#NEPOSTOJECA
+addi r8,r8,1 (Ne treba se izvrsiti)
+
+41 08 00 01 21 08 00 01
+
+//Mijenjamo r31
+
+addi r31,r31,-1 
+addi r8,r8,1 (Ne treba se izvrsiti)
+
+23 ff 00 01 21 08 00 01
+
+//OVERFLOW
+
+addi r8,r8,1
+addi r8,r8,32767  (SIGNED VRIJEDNOSTI SU OD -32767 DO 32767)
+
+21 08 00 01 21 08 7f ff 
+
+
+//Prekoračenje memorije
+
+sw r8,0xffff(r0)
+addi r8,r8,1 (Ne treba se izvrsiti)
+
+ac 0f ff ff 21 08 00 01
+
